@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "start-production": "serve -n -l 8080 dist",
+    "build": "webpack --mode development",
+    "build-production": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +28,7 @@
   },
   "dependencies": {
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "serve": "^10.0.0"
   }
 }
