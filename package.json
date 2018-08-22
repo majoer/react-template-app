@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
-    "start-production": "serve -n -l 8080 dist",
-    "build": "webpack --mode development",
-    "build-production": "webpack --mode production"
+    "clean": "rimraf dist",
+    "start": "webpack-dev-server --mode development --open --hot --config webpack.config.dev.js",
+    "start-production": "serve -n -l 8080 dist --config webpack.config.js",
+    "build": "npm run clean && webpack --mode development --config webpack.config.dev.js",
+    "build-production": "npm run clean && webpack --mode production --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
